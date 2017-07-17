@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="template" method="upgrade" client="site">
+    <name>GruntForJab15</name>
+    <creationDate>Maj 2015</creationDate>
+    <author>Jerri Christiansen</author>
+    <authorEmail>jerri@redweb.dk</authorEmail>
+    <authorUrl>http://www.redweb.dk</authorUrl>
+    <copyright>Copyright redWEB 2015. All rights reserved</copyright>
+    <license>GNU/GPL v.3 or later.</license>
+    <version>1.0.0</version>
+    <description>Simple Joomla template with Bootstrap</description>
+
+    <files>
+        <filename>index.php</filename>
+        <filename>templateDetails.xml</filename>
+        <filename>css/production.css</filename>
+        <filename>js/production.js</filename>
+        <folder>css</folder>
+        <folder>images</folder>
+        <folder>js</folder>
+        <folder>less</folder>
+    </files>
+
+    <positions>
+        <position>toolbar</position>
+        <position>logo</position>
+        <position>top</position>
+        <position>top2</position>
+        <position>menu</position>
+        <position>featured</position>
+        <position>grid-top</position>
+        <position>grid-top2</position>
+        <position>above-content</position>
+        <position>breadcrumbs</position>
+        <position>sidebar1</position>
+        <position>sidebar2</position>
+        <position>below-content</position>
+        <position>grid-bottom</position>
+        <position>grid-bottom2</position>
+        <position>bottom-menu</position>
+        <position>footer</position>
+    </positions>
+</extension>
