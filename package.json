@@ -2,7 +2,7 @@
   "name": "redweb",
   "version": "1.0.0",
   "description": "Base template for future redWEB projects",
-  "main": "index.js",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/JerryChr/gulp-sass-joomla-template#readme",
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
   }
 }
