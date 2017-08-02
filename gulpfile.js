@@ -1,5 +1,9 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var useref = require('gulp-useref');
+var uglify = require('gulp-uglify');
+var gulpIf = require('gulp-if');
+var cssnano = require('gulp-cssnano');
 var browserSync = require('browser-sync').create();
 
 gulp.task('sass', function(){
@@ -17,9 +21,18 @@ gulp.task('watch', ['browserSync', 'sass'], function (){
     gulp.watch('staging/js/*.js', browserSync.reload); 
 });
 
+gulp.task('useref', function(){
+  return gulp.src('index.php')
+    .pipe(useref())
+    .pipe(gulpIf('*.js', uglify()))
+    .pipe(gulpIf('*.css', cssnano()))
+    .pipe(gulp.dest('dist'))
+});
+
 gulp.task('browserSync', function() {
   browserSync.init({
     proxy: "http://localhost:8888/redcomponent"
   });
     gulp.watch("staging/scss/*.scss").on("change", browserSync.reload);
 })
+
