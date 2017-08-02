@@ -6,10 +6,9 @@ defined('_JEXEC') or die('Restricted access');
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>" >
 <head>
     <jdoc:include type="head" />
-    <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/production.css" type="text/css" />
+    <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/dist/css/styles.css" type="text/css" />
 </head>
 <body>
-
 <!-- Joomla Content -->
 <div class="container">
     <?php if ($this->countModules( 'sidebar1 or sidebar2' )) : ?>
@@ -38,8 +37,9 @@ defined('_JEXEC') or die('Restricted access');
     <?php endif; ?>
 </div>
 
+    <h3>Xin Chao WORLD!</h3>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/production.min.js"/>
+<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/dist/js/production.min.js"/>
 </body>
 </html>

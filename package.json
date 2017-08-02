@@ -1,11 +1,8 @@
 {
-  "name": "redweb",
+  "name": "redWEB",
   "version": "1.0.0",
   "description": "Base template for future redWEB projects",
   "main": "gulpfile.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JerryChr/gulp-sass-joomla-template.git"
@@ -25,6 +22,7 @@
   },
   "homepage": "https://github.com/JerryChr/gulp-sass-joomla-template#readme",
   "devDependencies": {
+    "browser-sync": "^2.18.13",
     "gulp": "^3.9.1",
     "gulp-sass": "^3.1.0"
   }
