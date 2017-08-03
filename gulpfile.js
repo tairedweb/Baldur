@@ -1,16 +1,27 @@
+//Requried dependencies, all needed but could be written simpler by removing 'var name'
 var gulp = require('gulp');
 var rename = require('gulp-rename');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
-var gulpIf = require('gulp-if');
 var cssnano = require('gulp-cssnano');
 var replace = require('gulp-replace');
 var browserSync = require('browser-sync').create();
 
+//Run 'gulp boot-sass' prior to running 'gulp-watch'
+gulp.task('boot-sass', function () {
+    return gulp.src('staging/scss/bootstrap.scss')
+    .pipe(sass())
+    .pipe(gulp.dest('staging/css'))
+    .pipe(cssnano({discardComments: {removeAll: true}}))
+    .pipe(rename('bootstrap.min.css'))
+    .pipe(gulp.dest('dist/css'))
+});
+
+//Compiling, minifying scss 
 gulp.task('sass', function(){
-    return gulp.src('staging/scss/*.+(scss|sass)')
-    .pipe(sass()) 
+    return gulp.src('staging/scss/styles.scss')
+    .pipe(sass())
     .pipe(gulp.dest('staging/css'))
     .pipe(cssnano({discardComments: {removeAll: true}}))
     .pipe(rename('dist.min.css'))
@@ -20,6 +31,7 @@ gulp.task('sass', function(){
     }))
 });
 
+//Concat, minifying js
 gulp.task('scripts', function(){
     return gulp.src(['staging/js/*.js'])
     .pipe(rename('dist.min.js'))
@@ -36,16 +48,23 @@ gulp.task('scripts', function(){
     }))
 });
 
+//Task to move all fonts from staging to dist folder, nothing more than that
+gulp.task('fonts', function() {
+  return gulp.src('staging/fonts/**/*')
+  .pipe(gulp.dest('dist/css/fonts'))
+})
+
+//Only monitor the styles.scss file, if we set it to look after all *.scss it would include bootstrap, and that takes longer to compile. Restructure folders if we need it to monitor for multiple files or import files into styles.scss instead
 gulp.task('browserSync', function() {
     browserSync.init({
         proxy: "http://localhost:8888/redcomponent"
     });
-    gulp.watch("staging/scss/*.scss").on("change", browserSync.reload);
+    gulp.watch("staging/scss/styles.scss").on("change", browserSync.reload);
 });
 
 
 gulp.task('watch', ['browserSync', 'sass', 'scripts'], function (){
-    gulp.watch('staging/scss/*.scss', ['sass']);
+    gulp.watch('staging/scss/styles.scss', ['sass']);
     gulp.watch('**/*.php', browserSync.reload); 
     gulp.watch('staging/js/*.js', ['scripts']);
 });

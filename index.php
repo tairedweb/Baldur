@@ -8,6 +8,9 @@ defined('_JEXEC') or die('Restricted access');
 <head>
    <jdoc:include type="head" />
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/dist/js/dist.min.js"> </script>
+    
+    <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/dist/css/bootstrap.min.css" type="text/css" />
+    
     <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/dist/css/dist.min.css" type="text/css" />
 </head>
 
@@ -39,9 +42,6 @@ defined('_JEXEC') or die('Restricted access');
         </div>
     <?php endif; ?>
 </div>
-
-<h3>Hello Mom!</h3>
-<button>Do NOT click me!</button>
 
 </body>
 </html>
