@@ -57,6 +57,7 @@ gulp.task('fonts', function() {
 //Only monitor the styles.scss file, if we set it to look after all *.scss it would include bootstrap, and that takes longer to compile. Restructure folders if we need it to monitor for multiple files or import files into styles.scss instead
 gulp.task('browserSync', function() {
     browserSync.init({
+        //Remember to change this proxy so that it have the right path according to your project
         proxy: "http://localhost:8888/redcomponent"
     });
     gulp.watch("staging/scss/styles.scss").on("change", browserSync.reload);
