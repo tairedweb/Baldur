@@ -6,7 +6,7 @@ defined('_JEXEC') or die('Restricted access');
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>" >
 <head>
     <jdoc:include type="head" />
-    <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/dist/css/styles.min.css" type="text/css" />
+    <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/dist/css/dist.min.css" type="text/css" />
 </head>
 <body>
 <!-- Joomla Content -->
@@ -41,7 +41,7 @@ defined('_JEXEC') or die('Restricted access');
     <button>Do not click me!</button>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/dist/js/main.min.js"/>
+<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/dist/js/dist.min.js"/>
 
 </body>
 </html>
