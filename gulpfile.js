@@ -5,6 +5,7 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var gulpIf = require('gulp-if');
 var cssnano = require('gulp-cssnano');
+var replace = require('gulp-replace');
 var browserSync = require('browser-sync').create();
 
 gulp.task('sass', function(){
@@ -22,10 +23,14 @@ gulp.task('sass', function(){
 gulp.task('scripts', function(){
     return gulp.src(['staging/js/*.js'])
     .pipe(rename('dist.min.js'))
-    .pipe(concat('dist.min.js'))
+    .pipe(concat('dist.min.js', {
+            newLine:'\n;'
+    }))
     .pipe(gulp.dest('dist/js'))
     .pipe(uglify())
     .pipe(gulp.dest('dist/js'))
+    .pipe(replace(/(\/\*\! Version [^*]* \*\/)/g, '\n$1')) 
+    .pipe(replace(/^\s*\r?\n/gm, ''))
     .pipe(browserSync.reload({
         stream: true
     }))
