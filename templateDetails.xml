@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="3.7" type="template" client="site">
-    <name>redWEB</name>
+    <name>Baldur</name>
     <creationDate>July 2017</creationDate>
-    <author>Jerri Christiansen</author>
+    <author>Jerri K. Christiansen</author>
     <authorEmail>jerri@redweb.dk</authorEmail>
     <authorUrl>http://www.redweb.dk</authorUrl>
     <copyright>Copyright redWEB 2017. All rights reserved</copyright>
     <license>GNU/GPL v.3 or later.</license>
     <version>3.7</version>
-    <description>redWEB Base Joomla template with Gulp, SASS, Bootstrap, Livereload</description>
+    <description>Baldur</description>
 
     <files>
         <filename>index.php</filename>

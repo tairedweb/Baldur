@@ -43,13 +43,5 @@ defined('_JEXEC') or die('Restricted access');
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/dist/js/main.min.js"/>
 
-    <!-- build:js js/main.min.js -->
-        <script src="/staging/js/main.js"/>
-    <!-- endbuild -->
-    
-    <!--build:css css/styles.min.css-->
-        <link rel="stylesheet" href="dist/css/styles.css">
-    <!-- endbuild -->
-    
 </body>
 </html>
