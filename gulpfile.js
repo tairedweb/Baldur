@@ -42,7 +42,7 @@ gulp.task('browserSync', function() {
 gulp.task('watch', ['browserSync', 'sass', 'scripts'], function (){
     gulp.watch('staging/scss/*.scss', ['sass']);
     gulp.watch('**/*.php', browserSync.reload); 
-    gulp.watch('staging/js/*.js', browserSync.reload);
+    gulp.watch('staging/js/*.js', ['scripts']);
 });
 
 
