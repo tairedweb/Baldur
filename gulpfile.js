@@ -7,7 +7,6 @@ var uglify = require('gulp-uglify');
 var cssnano = require('gulp-cssnano');
 var replace = require('gulp-replace');
 var tinypng = require('gulp-tinypng-compress');
-var cache = require('gulp-cache');
 var browserSync = require('browser-sync').create();
 
 //Run 'gulp boot-sass' prior to running 'gulp-watch'

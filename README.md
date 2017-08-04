@@ -1,6 +1,6 @@
 # Baldur
 
-*Prior to following below steps you must ensure that you have nodejs installed, open your terminal and write 'node -v' if you get a version nummber back then you have nodejs installed. Npm should be installed with nodejs, but if you want to be sure you can check with 'npm -v' as well.
+Prior to following below steps you must ensure that you have nodejs installed, open your terminal and write 'node -v' if you get a version nummber back then you have nodejs installed. Npm should be installed with nodejs, but if you want to be sure you can check with 'npm -v' as well.
 
 Steps:
 1. Setup a localhost environment with a fresh Joomla install
