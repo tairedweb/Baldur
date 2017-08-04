@@ -15,7 +15,7 @@ defined('_JEXEC') or die('Restricted access');
 </head>
 
 <body>
-
+    
 <div class="container">
     <?php if ($this->countModules( 'sidebar1 or sidebar2' )) : ?>
         <?php $sidebarwidth = "col-sm-3"; $contentwidth = "col-sm-9"; ?>
